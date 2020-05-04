@@ -40,14 +40,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Override_button = new System.Windows.Forms.Button();
+            this.SaveLib_button = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.SaveLib_button = new System.Windows.Forms.Button();
-            this.Override_button = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.goBack_button = new System.Windows.Forms.Button();
+            this.goForward_button = new System.Windows.Forms.Button();
+            this.path_textBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -164,22 +168,35 @@
             this.panel2.Size = new System.Drawing.Size(400, 658);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
+            // label5
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(400, 424);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(784, 284);
-            this.panel3.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(66, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(194, 26);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Select library type:";
             // 
-            // webBrowser1
+            // Override_button
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(400, 50);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(784, 374);
-            this.webBrowser1.TabIndex = 3;
+            this.Override_button.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Override_button.Location = new System.Drawing.Point(71, 294);
+            this.Override_button.Name = "Override_button";
+            this.Override_button.Size = new System.Drawing.Size(264, 52);
+            this.Override_button.TabIndex = 2;
+            this.Override_button.Text = "Override lib";
+            this.Override_button.UseVisualStyleBackColor = true;
+            // 
+            // SaveLib_button
+            // 
+            this.SaveLib_button.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveLib_button.Location = new System.Drawing.Point(71, 191);
+            this.SaveLib_button.Name = "SaveLib_button";
+            this.SaveLib_button.Size = new System.Drawing.Size(264, 52);
+            this.SaveLib_button.TabIndex = 1;
+            this.SaveLib_button.Text = "Save lib from target";
+            this.SaveLib_button.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -197,35 +214,61 @@
             this.comboBox1.Size = new System.Drawing.Size(264, 28);
             this.comboBox1.TabIndex = 0;
             // 
-            // SaveLib_button
+            // panel3
             // 
-            this.SaveLib_button.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveLib_button.Location = new System.Drawing.Point(71, 191);
-            this.SaveLib_button.Name = "SaveLib_button";
-            this.SaveLib_button.Size = new System.Drawing.Size(264, 52);
-            this.SaveLib_button.TabIndex = 1;
-            this.SaveLib_button.Text = "Save lib from target";
-            this.SaveLib_button.UseVisualStyleBackColor = true;
+            this.panel3.Controls.Add(this.path_textBox);
+            this.panel3.Controls.Add(this.goForward_button);
+            this.panel3.Controls.Add(this.goBack_button);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(400, 424);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(784, 284);
+            this.panel3.TabIndex = 2;
             // 
-            // Override_button
+            // webBrowser1
             // 
-            this.Override_button.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Override_button.Location = new System.Drawing.Point(71, 294);
-            this.Override_button.Name = "Override_button";
-            this.Override_button.Size = new System.Drawing.Size(264, 52);
-            this.Override_button.TabIndex = 2;
-            this.Override_button.Text = "Override lib";
-            this.Override_button.UseVisualStyleBackColor = true;
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(400, 50);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(784, 374);
+            this.webBrowser1.TabIndex = 3;
             // 
-            // label5
+            // goBack_button
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(66, 72);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 26);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Select library type:";
+            this.goBack_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goBack_button.Location = new System.Drawing.Point(0, 7);
+            this.goBack_button.Name = "goBack_button";
+            this.goBack_button.Size = new System.Drawing.Size(34, 21);
+            this.goBack_button.TabIndex = 0;
+            this.goBack_button.Text = "<<";
+            this.goBack_button.UseVisualStyleBackColor = true;
+            this.goBack_button.Click += new System.EventHandler(this.goBack_button_Click);
+            // 
+            // goForward_button
+            // 
+            this.goForward_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goForward_button.Location = new System.Drawing.Point(40, 7);
+            this.goForward_button.Name = "goForward_button";
+            this.goForward_button.Size = new System.Drawing.Size(34, 21);
+            this.goForward_button.TabIndex = 1;
+            this.goForward_button.Text = ">>";
+            this.goForward_button.UseVisualStyleBackColor = true;
+            this.goForward_button.Click += new System.EventHandler(this.goForward_button_Click);
+            // 
+            // path_textBox
+            // 
+            this.path_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.path_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.path_textBox.Location = new System.Drawing.Point(93, 7);
+            this.path_textBox.Name = "path_textBox";
+            this.path_textBox.Size = new System.Drawing.Size(668, 21);
+            this.path_textBox.TabIndex = 2;
+            this.path_textBox.Text = "You can paste the full path here and press enter.";
+            this.path_textBox.Enter += new System.EventHandler(this.path_textBox_Enter);
+            this.path_textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.path_textBox_KeyDown);
+            this.path_textBox.Leave += new System.EventHandler(this.path_textBox_Leave);
             // 
             // Form1
             // 
@@ -243,6 +286,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -266,6 +311,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Override_button;
         private System.Windows.Forms.Button SaveLib_button;
+        private System.Windows.Forms.Button goForward_button;
+        private System.Windows.Forms.Button goBack_button;
+        private System.Windows.Forms.TextBox path_textBox;
     }
 }
 
