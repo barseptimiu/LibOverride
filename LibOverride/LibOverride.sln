@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowserLogic", "WebBrowserLogic\WebBrowserLogic.csproj", "{E533E80F-88CF-4925-A614-6C3D8D8F4029}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{7EC9DB8D-D8C5-4900-B721-CC1616859B88}"
+	ProjectSection(SolutionItems) = preProject
+		CachedValues.txt = CachedValues.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
