@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 		CachedValues.txt = CachedValues.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{C7D2DB5B-6C0E-4F83-87F5-109517045F3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModel", "ViewModel", "{D9C402A5-1549-4B1A-9A1E-3E6E55866CCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF24A62B-E274-4038-8FC2-8A6109E8200F} = {C7D2DB5B-6C0E-4F83-87F5-109517045F3B}
+		{E533E80F-88CF-4925-A614-6C3D8D8F4029} = {D9C402A5-1549-4B1A-9A1E-3E6E55866CCA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F708559A-D5C3-493A-898F-748B16BBF390}
