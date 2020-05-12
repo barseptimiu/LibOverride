@@ -10,6 +10,7 @@ namespace LibModels
     public abstract class ReplaceableLib
     {
         protected string Path { get; set; }
+
         public void ReplaceLib()
         {
             // temporary

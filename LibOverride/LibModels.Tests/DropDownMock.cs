@@ -15,6 +15,7 @@ namespace LibModels.Tests
 
                 case 0:
                     return "AndroidAutoApp";
+
                 case 1:
                     return "libAndroidAutoAppLogic.so";
 
