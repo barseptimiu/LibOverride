@@ -45,13 +45,20 @@
             this.SaveLib_button = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.goBack_button = new System.Windows.Forms.Button();
-            this.goForward_button = new System.Windows.Forms.Button();
+            this.progress_label = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.path_textBox = new System.Windows.Forms.TextBox();
+            this.goForward_button = new System.Windows.Forms.Button();
+            this.goBack_button = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -158,6 +165,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.Override_button);
             this.panel2.Controls.Add(this.SaveLib_button);
@@ -216,6 +224,9 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.progress_label);
+            this.panel3.Controls.Add(this.progressBar1);
+            this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Controls.Add(this.path_textBox);
             this.panel3.Controls.Add(this.goForward_button);
             this.panel3.Controls.Add(this.goBack_button);
@@ -225,36 +236,49 @@
             this.panel3.Size = new System.Drawing.Size(784, 284);
             this.panel3.TabIndex = 2;
             // 
-            // webBrowser1
+            // progress_label
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(400, 50);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(784, 374);
-            this.webBrowser1.TabIndex = 3;
+            this.progress_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.progress_label.AutoSize = true;
+            this.progress_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progress_label.Location = new System.Drawing.Point(631, 252);
+            this.progress_label.Name = "progress_label";
+            this.progress_label.Size = new System.Drawing.Size(88, 20);
+            this.progress_label.TabIndex = 5;
+            this.progress_label.Text = "0/0 MBytes";
             // 
-            // goBack_button
+            // progressBar1
             // 
-            this.goBack_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goBack_button.Location = new System.Drawing.Point(0, 7);
-            this.goBack_button.Name = "goBack_button";
-            this.goBack_button.Size = new System.Drawing.Size(34, 21);
-            this.goBack_button.TabIndex = 0;
-            this.goBack_button.Text = "<<";
-            this.goBack_button.UseVisualStyleBackColor = true;
-            this.goBack_button.Click += new System.EventHandler(this.goBack_button_Click);
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(0, 246);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(293, 26);
+            this.progressBar1.TabIndex = 4;
             // 
-            // goForward_button
+            // groupBox1
             // 
-            this.goForward_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goForward_button.Location = new System.Drawing.Point(40, 7);
-            this.goForward_button.Name = "goForward_button";
-            this.goForward_button.Size = new System.Drawing.Size(34, 21);
-            this.goForward_button.TabIndex = 1;
-            this.goForward_button.Text = ">>";
-            this.goForward_button.UseVisualStyleBackColor = true;
-            this.goForward_button.Click += new System.EventHandler(this.goForward_button_Click);
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 34);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(761, 193);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Output";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(6, 21);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(749, 166);
+            this.textBox1.TabIndex = 0;
             // 
             // path_textBox
             // 
@@ -269,6 +293,48 @@
             this.path_textBox.Enter += new System.EventHandler(this.path_textBox_Enter);
             this.path_textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.path_textBox_KeyDown);
             this.path_textBox.Leave += new System.EventHandler(this.path_textBox_Leave);
+            // 
+            // goForward_button
+            // 
+            this.goForward_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goForward_button.Location = new System.Drawing.Point(40, 7);
+            this.goForward_button.Name = "goForward_button";
+            this.goForward_button.Size = new System.Drawing.Size(34, 21);
+            this.goForward_button.TabIndex = 1;
+            this.goForward_button.Text = ">>";
+            this.goForward_button.UseVisualStyleBackColor = true;
+            this.goForward_button.Click += new System.EventHandler(this.goForward_button_Click);
+            // 
+            // goBack_button
+            // 
+            this.goBack_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goBack_button.Location = new System.Drawing.Point(0, 7);
+            this.goBack_button.Name = "goBack_button";
+            this.goBack_button.Size = new System.Drawing.Size(34, 21);
+            this.goBack_button.TabIndex = 0;
+            this.goBack_button.Text = "<<";
+            this.goBack_button.UseVisualStyleBackColor = true;
+            this.goBack_button.Click += new System.EventHandler(this.goBack_button_Click);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(400, 50);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(784, 374);
+            this.webBrowser1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.continental;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 596);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(400, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -288,6 +354,9 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,6 +383,11 @@
         private System.Windows.Forms.Button goForward_button;
         private System.Windows.Forms.Button goBack_button;
         private System.Windows.Forms.TextBox path_textBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label progress_label;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
