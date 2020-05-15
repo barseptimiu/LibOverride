@@ -9,12 +9,8 @@ namespace LibModels
 {
     public abstract class ReplaceableLib
     {
-        protected string Path { get; set; }
+        public string Path { get; set; }
+        public string FileName { get; set; }
 
-        public void ReplaceLib()
-        {
-            // temporary
-            Debug.WriteLine(Path);
-        }
     }
 }

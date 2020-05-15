@@ -9,10 +9,12 @@ namespace LibModels
     public class AndroidAutoAppFramework : ReplaceableLib
     {
         private const string path = "/usr/lib/ovip/AppFwk/Domains";
+        private const string fileName = "libAndroidAutoAppFramework.so";
 
         public AndroidAutoAppFramework()
         {
             Path = path;
+            FileName = fileName;
         }
     }
 }

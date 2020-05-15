@@ -11,10 +11,12 @@ namespace LibModels
     public class AndroidAutoApp : ReplaceableLib
     {
         private const string path = "/usr/bin/ovip/Android";
+        private const string fileName = "AndroidAutoApp";
 
         public AndroidAutoApp()
         {
             Path = path;
+            FileName = fileName;
         }
     }
 }

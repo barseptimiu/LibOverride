@@ -9,10 +9,12 @@ namespace LibModels
     public class AndroidAutoHMI : ReplaceableLib
     {
         private const string path = "/usr/lib/ovip/AAuto";
+        private const string fileName = "libAAutoHMILib.so";
 
         public AndroidAutoHMI()
         {
             Path = path;
+            FileName = fileName;
         }
     }
 }
