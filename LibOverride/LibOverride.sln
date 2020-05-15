@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{EF24A62B-E274-4038-8FC2-8A6109E8200F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowserLogic", "WebBrowserLogic\WebBrowserLogic.csproj", "{E533E80F-88CF-4925-A614-6C3D8D8F4029}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "WebBrowserLogic\ViewModels.csproj", "{E533E80F-88CF-4925-A614-6C3D8D8F4029}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{7EC9DB8D-D8C5-4900-B721-CC1616859B88}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,6 +23,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8D5B0C9F-D3CE-49A8-9C13-E9CC098BC5EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibModels.Tests", "LibModels.Tests\LibModels.Tests.csproj", "{F54A7E93-F548-4613-BF84-AF19071BEBD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppLogic", "AppLogic", "{48B246FC-EB62-4FAF-9987-B04364DA6564}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
