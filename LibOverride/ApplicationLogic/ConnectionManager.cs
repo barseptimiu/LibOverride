@@ -14,6 +14,7 @@ namespace ApplicationLogic
     {
         private readonly SftpClient _client;
         private readonly LibFactory factory;
+        private readonly CommandManager commandManager;
 
         public event Action<long> MaxValueDetermined;
         public event Action<ulong> ProgressChanged;
@@ -24,6 +25,9 @@ namespace ApplicationLogic
                 connectionData.Port,
                 connectionData.Username,
                 connectionData.Password);
+
+            commandManager = new CommandManager(connectionData);
+
             factory = new LibFactory();
         }
 
@@ -33,6 +37,8 @@ namespace ApplicationLogic
             {
                 if (!_client.IsConnected)
                     _client.Connect();
+
+                commandManager.Connect();
             }
             catch (Exception e)
             {
@@ -44,6 +50,7 @@ namespace ApplicationLogic
         {
             if (_client.IsConnected)
                 _client.Disconnect();
+            commandManager.Disconnect();
         }
 
         public void Upload(string libType, string sourcePath)
@@ -58,7 +65,11 @@ namespace ApplicationLogic
             // TODO: Log started uploading..
             if (_client.IsConnected)
             {
+                commandManager.StopAndroidAutoService();
+
                 _client.UploadFile(FileStream, RemotePath, OnProgressChanged);
+
+                commandManager.StartAndroidAutoService();
             }
             // TODO: Log uploaded finished
 
