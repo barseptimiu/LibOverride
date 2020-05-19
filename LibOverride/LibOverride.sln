@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibModels.Tests", "LibModel
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppLogic", "AppLogic", "{48B246FC-EB62-4FAF-9987-B04364DA6564}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationLogic", "ApplicationLogic\ApplicationLogic.csproj", "{FBADB0A2-6D9C-42BB-B5C0-0B626A19CFCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{F54A7E93-F548-4613-BF84-AF19071BEBD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F54A7E93-F548-4613-BF84-AF19071BEBD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F54A7E93-F548-4613-BF84-AF19071BEBD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBADB0A2-6D9C-42BB-B5C0-0B626A19CFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBADB0A2-6D9C-42BB-B5C0-0B626A19CFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBADB0A2-6D9C-42BB-B5C0-0B626A19CFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBADB0A2-6D9C-42BB-B5C0-0B626A19CFCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{E533E80F-88CF-4925-A614-6C3D8D8F4029} = {D9C402A5-1549-4B1A-9A1E-3E6E55866CCA}
 		{2F762145-CB25-434D-956E-4A5B1543893B} = {79A71F18-F7FA-40AB-8D78-2E9875AB016C}
 		{F54A7E93-F548-4613-BF84-AF19071BEBD8} = {8D5B0C9F-D3CE-49A8-9C13-E9CC098BC5EC}
+		{FBADB0A2-6D9C-42BB-B5C0-0B626A19CFCA} = {48B246FC-EB62-4FAF-9987-B04364DA6564}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F708559A-D5C3-493A-898F-748B16BBF390}
