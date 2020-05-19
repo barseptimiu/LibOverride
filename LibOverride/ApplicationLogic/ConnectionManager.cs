@@ -39,6 +39,7 @@ namespace ApplicationLogic
                     _client.Connect();
 
                 commandManager.Connect();
+                commandManager.ReadWriteAccess();
             }
             catch (Exception e)
             {
