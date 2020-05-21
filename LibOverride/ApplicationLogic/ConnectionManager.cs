@@ -60,16 +60,17 @@ namespace ApplicationLogic
             Stream FileStream = new FileStream(sourcePath + replaceableLib.FileName, FileMode.Open);
             String RemotePath = replaceableLib.Path + replaceableLib.FileName;
 
-            // Set the progressbar max
-            OnMaxValueDetermined(FileStream.Length);
-
             // TODO: Log started uploading..
             if (_client.IsConnected)
             {
                 commandManager.StopAndroidAutoService();
 
+                // Set the progressbar max
+                OnMaxValueDetermined(FileStream.Length);
+
                 _client.UploadFile(FileStream, RemotePath, OnProgressChanged);
 
+                commandManager.Sync();
                 commandManager.StartAndroidAutoService();
             }
             // TODO: Log uploaded finished

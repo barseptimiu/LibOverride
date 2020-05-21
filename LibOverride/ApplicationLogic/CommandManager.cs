@@ -40,17 +40,34 @@ namespace ApplicationLogic
 
         public void ReadWriteAccess()
         {
-            throw new NotImplementedException();
+            if(_client.IsConnected)
+            {
+                _client.RunCommand("mount - / -oremount,rw");
+            }
         }
 
         public void StopAndroidAutoService()
         {
-            throw new NotImplementedException();
+            if (_client.IsConnected)
+            {
+                _client.RunCommand("systemctl stop ovip-sys-connsrv-androidauto");
+            }
         }
 
         public void StartAndroidAutoService()
         {
-            throw new NotImplementedException();
+            if (_client.IsConnected)
+            {
+                _client.RunCommand("systemctl start ovip-sys-connsrv-androidauto");
+            }
+        }
+
+        public void Sync()
+        {
+            if (_client.IsConnected)
+            {
+                _client.RunCommand("sync");
+            }
         }
     }
 }
